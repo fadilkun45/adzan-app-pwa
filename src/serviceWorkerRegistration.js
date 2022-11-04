@@ -1,6 +1,9 @@
 // This optional code is used to register a service worker.
 // register() is not called by default.
 
+import { useToast } from "@chakra-ui/react";
+import { toast } from "react-toastify";
+
 // This lets the app load faster on subsequent visits in production, and gives
 // it offline capabilities. However, it also means that developers (and users)
 // will only see deployed updates on subsequent visits to a page, after all the
@@ -96,7 +99,9 @@ function registerValidSW(swUrl, config) {
     });
 }
 
+
 function checkValidServiceWorker(swUrl, config) {
+
   // Check if the service worker can be found. If it can't reload the page.
   fetch(swUrl, {
     headers: { 'Service-Worker': 'script' },
@@ -121,6 +126,7 @@ function checkValidServiceWorker(swUrl, config) {
     })
     .catch(() => {
       console.log('No internet connection found. App is running in offline mode.');
+      toast.error('kamu sedang offline')      
     });
 }
 
