@@ -1,3 +1,3 @@
 # adzan-app-pwa
 
-mw bisa menggunakan PwA
+mw bisa menggunakan pwa
